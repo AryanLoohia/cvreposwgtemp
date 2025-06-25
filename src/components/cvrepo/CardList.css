@@ -56,8 +56,9 @@ body {
 @media (max-width:400px) {
   .tabs{
       padding: 3px;
+
       font-size: 15px;
-      display: block;
+      display: none;
   }
   .active-tabs{
       font-size: 20px;
