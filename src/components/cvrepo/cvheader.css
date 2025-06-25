@@ -1,0 +1,28 @@
+.cvheader{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 2vh;
+}
+
+.cvheader h2{
+    margin-top: 11vh;
+    color: #028D93;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cvheader p{
+    color: #a9a9a9;
+    padding-top: 5px;
+    font-weight: 300;
+}
+
+@media (max-width:600px) {
+    .cvheader h2{
+        margin-top: 12vh;
+    }
+    p{
+        margin:15px;
+    }
+
+}

@@ -1,0 +1,25 @@
+.home{
+    margin-top: 10px;
+}
+
+.panel-list{
+    display:grid;
+    grid-template-columns:3fr 13fr;
+    height: 100vh;
+    /* overflow-y: auto; */
+}
+
+.panel{
+    padding-top: 10%;
+    border: 10px;
+    background-image:linear-gradient(to right,rgb(140, 213, 210),rgb(200, 216, 216),white);
+    height: 100vh;
+    overflow-y: auto;
+    padding-left: 10%;
+    
+}
+
+.card-list{
+    height: 100vh;
+    overflow-y: auto;
+}

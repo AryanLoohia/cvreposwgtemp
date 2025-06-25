@@ -1,0 +1,195 @@
+.cvcard{
+  display: block;
+  position: relative;
+  max-width: 262px;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #00838d;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:before {
+    transform: scale(21);
+  }
+}
+
+.cvcard:hover {
+  p {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  h3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+.cvcontainer {
+  position: relative;
+  width: 100%;
+  padding: 4px;
+}
+
+.cvimage {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  border: 1.3px solid black;
+  border-radius: 3px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity:0;
+  transition: .2s ease;
+  cursor: pointer;
+}
+.software{
+  background: linear-gradient(to right bottom, #004080, #00FFFF 120%);
+}
+.consultancy{
+  background: linear-gradient(to right bottom, #5DBB7B, #7AE59D 120%);
+}
+.data{
+  background: linear-gradient(to right bottom, #FF7F50, #FFD700 120%);
+}
+.core{
+  background: linear-gradient(to right bottom, #8B0000, #FF1493 120%);
+}
+.quant{
+  background: linear-gradient(to right bottom, #9400D3, #FF00FF 120%);
+}
+.finance{
+  background: linear-gradient(to right bottom, #4169E1, #00BFFF 120%);
+}
+.product{
+  background: linear-gradient(to right bottom, #FF4500, #FFA500 120%);
+}
+.cvcontainer:hover .overlay {
+  opacity:1;
+}
+
+.cvtext {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 72%;
+  overflow-wrap: break-word;
+}
+
+.cvname{
+  padding-top: 4px;
+  text-align: center;
+  color: black;
+  font-size: small;
+  border-top: none;
+  line-height: 0.5;
+}
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 12px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.dialogtext{
+  text-align: center;
+}
+
+.dialog-content {
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.software2{
+box-shadow: 4px 4px #00838d;
+}
+.consultancy2{
+box-shadow: 4px 4px rgb(36, 201, 36);
+}
+.data2{
+box-shadow: 4px 4px orange;
+}
+.core2{
+box-shadow: 4px 4px #ff1493;
+}
+.quant2{
+box-shadow: 4px 4px #ff00ff;
+}
+.finance2{
+box-shadow: 4px 4px #00bfff;
+}
+.product2{
+box-shadow: 4px 4px #ffa500;
+}
+
+.data2{
+box-shadow: 4px 4px orange;
+}
+
+.dialog-content img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 84vh;
+  margin-bottom: 10px;
+}
+
+.close-icon {
+  float: right;
+  cursor: pointer;
+  background-color: white;
+  font-size: 2rem;
+}
+.arrow-button{
+cursor: pointer;
+padding-bottom: 5px;
+font-size: 2rem;
+margin: 0 10px;
+border-radius: 100px;
+width: 4rem;
+height: 4rem;
+background: none;
+color: white;
+}
+.left{
+padding-right: 4px;
+}
+.right{
+padding-left: 2px;
+}

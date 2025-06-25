@@ -1,0 +1,214 @@
+.resourcesSection{
+  position: relative;
+  animation-name: example;
+  animation-duration: 1.6s;
+  }
+  @keyframes example {
+      0%  { left:0px; top:50px;}
+      100% { left:0px; top:0px;}
+  }
+
+.resources2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-flow: wrap;
+    margin: 80px 4% 30px 4%;
+    height: 100%;
+    padding-top: 3vh;
+  }
+  .resourcesBar,.resourcesBar2{
+    position: absolute;
+    top: 0px;
+    height: 10px;
+    width: 30%;
+    background-color: #00293A;
+  }
+  .resourcesBar2{
+    position: absolute;
+    height: 10px;
+    margin-left: 30%;
+    width: 48%;
+    background-color: #028D93;
+  }
+  @media (max-width: 600px) {
+    .resourcesBar,.resourcesBar2{
+      display: none;
+    }
+  }
+  figure.snip0056 {
+    position: relative;
+    overflow: hidden;
+    margin: 30px 10px;
+    min-width: 380px;
+    max-width: 480px;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    transition: 0.25s;
+  }
+  figure.snip0056 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  figure.snip0056:hover{
+    box-shadow: 0px 0px 8px 0px rgb(177, 175, 175);
+    border-radius: 20px;
+  }
+  figure.snip0056 > img {
+    width: 50%;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    -webkit-transition: all 0.35s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6);
+    position: relative;
+    float: right;
+    right: -15%;
+    z-index: 1;
+  }
+  figure.snip0056 figcaption {
+    padding: 20px 30px 20px 20px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+  }
+  figure.snip0056 figcaption h2,
+  figure.snip0056 figcaption p {
+    margin: 0;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+  }
+  figure.snip0056 figcaption h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  figure.snip0056 figcaption h2 span {
+    font-weight: 800;
+    color:#028D93;
+  }
+  figure.snip0056 figcaption p {
+    font-size: 0.9em;
+    opacity: 0.8;
+  }
+  figure.snip0056 figcaption .icons {
+    width: 100%;
+    text-align: left;
+  }
+  figure.snip0056 figcaption .icons i {
+    font-size: 26px;
+    padding: 5px;
+    top: 50%;
+    color: #000000;
+  }
+  figure.snip0056 figcaption a {
+    opacity: 0.3;
+    -webkit-transition: opacity 0.25s;
+    transition: opacity 0.25s;
+  }
+  figure.snip0056 figcaption a:hover {
+    opacity: 0.8;
+  }
+  figure.snip0056 .position {
+    width: 100%;
+    text-align: left;
+    padding: 12px 30px;
+    margin: 0px;
+    font-size: 0.9em;
+    transition: 0.25s ease;
+    opacity: 1;
+    font-style: italic;
+    color: #ffffff;
+    background: #00293A;
+    clear: both;
+  }
+  figure.snip0056 a{
+    text-decoration: none;
+  }
+  figure.snip0056 > img{
+    width:225px;
+    height: 200px;
+  }
+  @media (max-width: 450px) {
+    figure.snip0056 {
+        font-family: 'Raleway', Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+        margin: 30px 10px;
+        min-width: 250px;
+        max-width: 90%;
+        width: 100%;
+        background: #ffffff;
+        color: #000000;
+        transition: 0.25s;
+      }
+    figure.snip0056 > img{
+        width: 165px;
+        height: 150px;
+      }
+      figure.snip0056 figcaption {
+        padding: 10px 30px 30px 20px;
+        position: absolute;
+        left: 0;
+        width: 60%;
+      }
+      figure.snip0056 .position {
+        width: 100%;
+        text-align: left;
+        padding: 8px 28px;
+        margin: 0px;
+        font-size: 0.9em;
+        transition: 0.25s ease;
+        opacity: 1;
+        font-style: italic;
+        color: #ffffff;
+        background: #00293A;
+        clear: both;
+      }
+  }
+  @media (max-width:400px) {
+    figure.snip0056 > img{
+        width: 125px;
+        height: 110px;
+      }
+      figure.snip0056{
+        width: 80%;
+      }
+      figure.snip0056 figcaption {
+        padding: 20px 50px 20px 0px;
+        position: absolute;
+        left: 5%;
+        width: 72%;
+        font-size: 0.9rem;
+      }
+      figure.snip0056 figcaption p {
+        font-size: 0.9em;
+        opacity: 0.8;
+        display: none;
+      }
+  }
+
+  figure.snip0056:hover > img,
+  figure.snip0056.hover > img {
+    right: -12%;
+  }
+  .position:hover{
+    cursor: pointer;
+  }
+  .link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .position a{
+    text-decoration: none;
+    color: #ffffff;
+  }

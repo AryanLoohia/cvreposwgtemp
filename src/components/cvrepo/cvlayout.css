@@ -1,0 +1,25 @@
+.cvlayout {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+  }
+  @media (max-width: 1200px) {
+    .blogList-wrap2 {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .cvlayout,.blogList-wrap2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .cvlayout,.blogList-wrap2 {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  

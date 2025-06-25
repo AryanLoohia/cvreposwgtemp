@@ -1,0 +1,499 @@
+.grid-container {
+  margin-top: -15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 252px);
+  visibility: hidden;
+  pointer-events: none;
+  max-height: 0px;
+
+  &.active{
+    max-height: unset;
+    visibility: visible;
+    pointer-events: auto;
+  }
+} 
+
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition-duration: 1s;
+
+  &:nth-child(1){
+    margin-top: 0;
+    transition-delay: $columns-transition-delay * 0;
+  }
+  &:nth-child(2){
+    margin-top: 160px;
+    transition-delay: $columns-transition-delay * 1;
+  }
+  &:nth-child(3){
+    margin-top: 320px;
+    transition-delay: $columns-transition-delay * 2;
+  }
+  &:nth-child(4){
+    margin-top: 480px;
+    transition-delay: $columns-transition-delay * 3;
+  }
+  &:nth-child(5){
+    margin-top: 320px;
+    transition-delay: $columns-transition-delay * 4;
+  }
+  &:nth-child(6){
+    margin-top: 160px;
+    transition-delay: $columns-transition-delay * 5;
+  }
+  &:nth-child(7){
+    margin-top: 0;
+    transition-delay: $columns-transition-delay * 6;
+  }
+}
+
+.item11 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/1.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item11:not(:first-child){
+margin-top: 16px;
+}
+.item12 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/2.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item12:not(:first-child){
+margin-top: 16px;
+}
+.item13 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/3.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item13:not(:first-child){
+margin-top: 16px;
+}
+.item14 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/4.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item14:not(:first-child){
+margin-top: 16px;
+}
+.item15 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/5.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item15:not(:first-child){
+margin-top: 16px;
+}
+.item16 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/6.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item16:not(:first-child){
+margin-top: 16px;
+}
+.item17 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/7.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item17:not(:first-child){
+margin-top: 16px;
+}
+.item18 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/8.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item18:not(:first-child){
+margin-top: 16px;
+}
+.item19 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/9.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item19:not(:first-child){
+margin-top: 16px;
+}
+.item110 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/10.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item110:not(:first-child){
+margin-top: 16px;
+}
+.item111 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/ACADS/11.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item111:not(:first-child){
+margin-top: 16px;
+}
+
+
+// 2nd 
+
+.item21 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/1.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item21:not(:first-child){
+margin-top: 16px;
+}
+.item22 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/2.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item22:not(:first-child){
+margin-top: 16px;
+}
+.item23 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/3.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item23:not(:first-child){
+margin-top: 16px;
+}
+.item24 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/4.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item24:not(:first-child){
+margin-top: 16px;
+}
+.item25 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/5.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item25:not(:first-child){
+margin-top: 16px;
+}
+.item26 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/6.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item26:not(:first-child){
+margin-top: 16px;
+}
+.item27 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/7.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item27:not(:first-child){
+margin-top: 16px;
+}
+.item28 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/8.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item28:not(:first-child){
+margin-top: 16px;
+}
+.item29 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/9.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item29:not(:first-child){
+margin-top: 16px;
+}
+.item210 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/10.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item210:not(:first-child){
+margin-top: 16px;
+}
+.item211 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/PLACE/11.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item211:not(:first-child){
+margin-top: 16px;
+}
+
+
+//  3rd
+
+
+.item31 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/1.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item31:not(:first-child){
+margin-top: 16px;
+}
+.item32 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/2.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item32:not(:first-child){
+margin-top: 16px;
+}
+.item33 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/3.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item33:not(:first-child){
+margin-top: 16px;
+}
+.item34 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/4.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item34:not(:first-child){
+margin-top: 16px;
+}
+.item35 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/5.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item35:not(:first-child){
+margin-top: 16px;
+}
+.item36 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/6.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item36:not(:first-child){
+margin-top: 16px;
+}
+.item37 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/7.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item37:not(:first-child){
+margin-top: 16px;
+}
+.item38 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/8.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item38:not(:first-child){
+margin-top: 16px;
+}
+.item39 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/9.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item39:not(:first-child){
+margin-top: 16px;
+}
+.item310 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/10.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item310:not(:first-child){
+margin-top: 16px;
+}
+.item311 {
+  width: 236px;
+  height: 350px;
+  background: url(../../../../assets/CJ/11.png);
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+//Take everything thats not true with the condition in the parentheses
+.item311:not(:first-child){
+margin-top: 16px;
+}
+
+
+// .item2 {
+//   width: 236px;
+//   height: 350px;
+//   background: url(https://drive.google.com/uc?export=view&id=1YEpfNWUT5icgrrhcRiw3zBajyqZKdlaL);
+//   object-fit: cover;
+//   border-radius: 10px;
+// }
+
+//Take everything thats not true with the condition in the parentheses
+// .item2:not(:first-child){
+// margin-top: 16px;
+// }
+
+
+// .item3 {
+//   width: 236px;
+//   height: 350px;
+//   background: url(https://drive.google.com/uc?export=view&id=1Sa1Qp8na6l3YfZqsTN7PDsn5u2UIHxV2);
+//   object-fit: cover;
+//   border-radius: 10px;
+// }
+
+// //Take everything thats not true with the condition in the parentheses
+// .item3:not(:first-child){
+// margin-top: 16px;
+// }
+@media (max-width: 800px) {
+ .grid-container{
+  margin-top: -33vh;
+ }
+}
