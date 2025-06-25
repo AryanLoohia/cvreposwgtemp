@@ -1,260 +1,261 @@
 *, ::before, ::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    background: #fff;
-  }
-  
-  .Tcontainer {
-    width: 80vw;
-    margin-left: 20vw;
-    display: flex;
-    position: relative;
-    word-break: break-all;
-  }
-  .Tcontainer2 {
-    margin-left: none;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin: -15px auto 0;
-    word-break: break-all;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+}
+
+.Tcontainer {
+  width: 80vw;
+  margin-left: 20vw;
+  display: flex;
+  position: relative;
+  word-break: break-all;
+}
+.Tcontainer2 {
+  margin-left: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: -15px auto 0;
+  word-break: break-all;
+}
 .bloc-tabs {
-    display: flex;
+  display: flex;
+
+}
+.tabs {
   
-  }
-  .tabs {
-    
-    background-color: #fff;
-    padding: 15px;
-    font-size: 18px;
-    text-align: center;
-    width: 50%;
-    cursor: pointer;
-    box-sizing: content-box;
-    position: relative;
-    outline: none;
-    transition: 0.3s;
-    word-break: break-word;
-    color:#00293A;
-    width: 100%;
-  }
-  
-  .active-tabs  {
-    font-size: 22px;
-    font-weight:900;
-    text-align:center;
-    color: #00293A;
-    margin: 2vh 0px 2vh 0px;
-    word-break:break-word;
-  }
-  @media (max-width:400px) {
-    .tabs{
-        padding: 3px;
-        font-size: 15px;
-        display: block;
-    }
-    .active-tabs{
-        font-size: 20px;
-    }
-    .bloc-tabs{
+  background-color: #fff;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  width: 50%;
+  DISPLAY:none;
+  cursor: pointer;
+  box-sizing: content-box;
+  position: relative;
+  outline: none;
+  transition: 0.3s;
+  word-break: break-word;
+  color:#00293A;
+  width: 100%;
+}
+
+.active-tabs  {
+  font-size: 22px;
+  font-weight:900;
+  text-align:center;
+  color: #00293A;
+  margin: 2vh 0px 2vh 0px;
+  word-break:break-word;
+}
+@media (max-width:400px) {
+  .tabs{
+      padding: 3px;
+      font-size: 15px;
       display: block;
-      text-align: center;
-    }
   }
-  /* @media (max-width:350px) {
-    .tabs{
-        padding: 3px;
-        font-size: 14px;
-    }
-    .active-tabs{
-        font-size: 17px;
-        width: 50%;
-    }
-  } */
-  @media (max-width:350px) {
-    .tabs{
-        padding: 3px;
-        font-size: 12px;
-    }
-    .active-tabs{
-        font-size: 14px;
-        width: 100%;
-    }
+  .active-tabs{
+      font-size: 20px;
   }
-  .active-tabs::before {
-    content: "";
+  .bloc-tabs{
     display: block;
-    position: absolute;
-    top: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% + 2px);
-    height: 5px;
+    text-align: center;
   }
+}
+/* @media (max-width:350px) {
+  .tabs{
+      padding: 3px;
+      font-size: 14px;
+  }
+  .active-tabs{
+      font-size: 17px;
+      width: 50%;
+  }
+} */
+@media (max-width:350px) {
+  .tabs{
+      padding: 3px;
+      font-size: 12px;
+  }
+  .active-tabs{
+      font-size: 14px;
+      width: 100%;
+  }
+}
+.active-tabs::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% + 2px);
+  height: 5px;
+}
+
+
+
+button {
+  border: none;
   
+}
+.content-tabs {
+  flex-grow : 1;
+}
+.contentcv {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.contentcv h2 {
+  padding: 0px 0 5px 0px;
+}
+.contentcv hr {
+  width: 100px;
+  height: 2px;
+  background: #222;
+  margin-bottom: 5px;
+}
+
+.active-contentcv {
+  display: block;
+}
+.sidepanel{
+  width: 18vw;
+  margin: 0 1vw;
+  padding-bottom: 2vh;
+  position: fixed;
+  z-index: 1;
+  top: 32vh;
+  background: linear-gradient(to bottom,#f0f4f7, #deeff5, #caeaea 160%);
+  overflow-x: hidden;
+  border: 1.5px solid  #003038;
+  border-radius: 10px;
   
-  
-  button {
-    border: none;
-    
-  }
-  .content-tabs {
-    flex-grow : 1;
-  }
-  .contentcv {
-    background: white;
-    padding: 20px;
-    width: 100%;
-    height: 100%;
-    display: none;
-  }
-  .contentcv h2 {
-    padding: 0px 0 5px 0px;
-  }
-  .contentcv hr {
-    width: 100px;
-    height: 2px;
-    background: #222;
-    margin-bottom: 5px;
-  }
-  
-  .active-contentcv {
-    display: block;
-  }
-  .sidepanel{
-    width: 18vw;
-    margin: 0 1vw;
-    padding-bottom: 2vh;
-    position: fixed;
-    z-index: 1;
-    top: 32vh;
-    background: linear-gradient(to bottom,#f0f4f7, #deeff5, #caeaea 160%);
-    overflow-x: hidden;
-    border: 1.5px solid  #003038;
-    border-radius: 10px;
-    
 }
 .sidepanel_title{
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding-top: 1vh;
-    padding-bottom: 1vh;
-    background: linear-gradient(to right bottom, #004969, #03b5b5 120%);
-    color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background: linear-gradient(to right bottom, #004969, #03b5b5 120%);
+  color: white;
 }
 .filters ul{
-  padding-top: 2vh;
+padding-top: 2vh;
+padding-left: 1.5vw;
+list-style-type: none;
+font-size: 1.1rem;
+font-weight: 500;
+line-height: 1.5rem;
+text-transform: capitalize;
+}
+
+@media (max-width:1000px) {
+.sidepanel_title{
+  font-size: 1rem;
+}
+.filters ul{
+  padding-top: 1.5vh;
   padding-left: 1.5vw;
   list-style-type: none;
-  font-size: 1.1rem;
-  font-weight: 500;
-  line-height: 1.5rem;
-  text-transform: capitalize;
+  font-size: 0.8rem;
 }
-
-@media (max-width:1000px) {
-  .sidepanel_title{
-    font-size: 1rem;
-  }
-  .filters ul{
-    padding-top: 1.5vh;
-    padding-left: 1.5vw;
-    list-style-type: none;
-    font-size: 0.8rem;
-  }
 
 }
 @media (max-width:1000px) {
-  .sidepanel_title{
-    font-size: 0.8rem;
-  }
-  .sidepanel{
-    border-radius: 7px;
-  }
+.sidepanel_title{
+  font-size: 0.8rem;
+}
+.sidepanel{
+  border-radius: 7px;
+}
 }
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+position: absolute;
+top: 0;
+left: 0;
+height: 25px;
+width: 25px;
+background-color: #eee;
 }
 .profilename:hover{
-  cursor: pointer;
+cursor: pointer;
 }
 
-  
+
 @media (max-width:600px) {
-  .sidepanel_title{
-    padding-top:1vh;
-    font-size: 0.8rem;
-  }
+.sidepanel_title{
+  padding-top:1vh;
+  font-size: 0.8rem;
+}
+.sidepanel{
+  border-radius: 7px;
+  padding-bottom: 0vh;
+  position: absolute;
+}
+.sidepanel{
+  margin-left: 34%;
+  margin-top:-7%;
+  width: 32%;
+}
+.filter-icon{
+  padding-top: 1vh;
+  text-align: center;
+  font-size: small;
+} 
+.Tcontainer{
+  margin:auto;
+}
+.sidepanel h3::after{
+  content: '\25BC';
+}
+.sidepanel.expand {
+  width: 28%; /* Expand the side panel width when the filter icon is clicked */
+  /* Add additional styles for the expanded side panel */
+
+}
+.sidepanel.expand h3:after{
+  content: '\25B2';
+}
+}
+
+@media (max-width:420px)
+{
   .sidepanel{
-    border-radius: 7px;
-    padding-bottom: 0vh;
-    position: absolute;
-  }
-  .sidepanel{
-    margin-left: 34%;
+    margin-left: 30%;
     margin-top:-7%;
-    width: 32%;
+    position: absolute;
+    width: 40%;
   }
-  .filter-icon{
-    padding-top: 1vh;
-    text-align: center;
-    font-size: small;
-  } 
+  .sidepanel_title{
+    font-size: 0.75rem;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .sidepanel.expand {
+    width: 40%; /* Expand the side panel width when the filter icon is clicked */
+    /* Add additional styles for the expanded side panel */
+  }
+
   .Tcontainer{
     margin:auto;
   }
-  .sidepanel h3::after{
-    content: '\25BC';
+  .bloc-tabs{
+    margin-top: 20%;
   }
-  .sidepanel.expand {
-    width: 28%; /* Expand the side panel width when the filter icon is clicked */
-    /* Add additional styles for the expanded side panel */
 
-  }
-  .sidepanel.expand h3:after{
-    content: '\25B2';
-  }
 }
 
-  @media (max-width:420px)
-  {
-    .sidepanel{
-      margin-left: 30%;
-      margin-top:-7%;
-      position: absolute;
-      width: 40%;
-    }
-    .sidepanel_title{
-      font-size: 0.75rem;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-    .sidepanel.expand {
-      width: 40%; /* Expand the side panel width when the filter icon is clicked */
-      /* Add additional styles for the expanded side panel */
-    }
+@media (max-width:280px)
+{
 
-    .Tcontainer{
-      margin:auto;
-    }
-    .bloc-tabs{
-      margin-top: 20%;
-    }
-  
-  }
-
-  @media (max-width:280px)
-  {
-
-  }
+}
