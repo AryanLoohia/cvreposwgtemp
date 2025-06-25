@@ -30,6 +30,8 @@ function ProductFilters(props) {
   );
 }
 
+const ITEMS_PER_PAGE = 20;
+
 const CardList = () => {
 
 
@@ -38,34 +40,32 @@ const CardList = () => {
     products: PRODUCTS,
     filters: new Set(),
   });
+  const [currentPage, setCurrentPage] = useState(1);
 
   const toggleTab = useCallback((index) => {
     setToggleState(index);
-
+    setCurrentPage(1);
     if (index === 1) {
       PRODUCTS = internCVList;
-      console.log(1);
-      
     } else {
       PRODUCTS = placementCVList;
-      console.log(2);
     }
     setState((previousState) => {
       let filters = new Set(previousState.filters);
-      
       let products = PRODUCTS;
       return {
         filters,
         products,
       };
     });
-  }, [toggleState,setState]);
+  }, [setState]);
 
 
   const CATEGORIES = ["software", "consultancy", "data", "product", "core", "quant", "finance"];
 
   const handleFilterChange = useCallback(
     (event) => {
+      setCurrentPage(1);
       setState((previousState) => {
         let filters = new Set(previousState.filters);
         let products = PRODUCTS;
@@ -91,6 +91,17 @@ const CardList = () => {
     [setState]
   );
 
+  const totalItems = state.products.length;
+  const totalPages = Math.ceil(totalItems / ITEMS_PER_PAGE);
+  const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIdx = startIdx + ITEMS_PER_PAGE;
+  const paginatedProducts = state.products.slice(startIdx, endIdx);
+
+  const handlePageChange = (page) => {
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
+  };
 
   const [isFilterOpen, setFilterOpen] = useState(false);
   const [isMobileView, setMobileView] = useState(false);
@@ -170,20 +181,29 @@ const CardList = () => {
             Placement
           </button>
         </div>
-        <div className="content-tabs">
-          <div
-            className={
-              toggleState === 2 ? "contentcv  active-contentcv" : "contentcv"
-            }
-          >
-            <Interncv blogs={state.products} />
+        {/* Pagination Controls - move above cards */}
+        {totalPages > 1 && (
+          <div className="pagination-controls" style={{ margin: '24px 0', display: 'flex', justifyContent: 'center', gap: '8px' }}>
+            <button onClick={() => handlePageChange(currentPage - 1)} disabled={currentPage === 1}>&laquo; Prev</button>
+            {Array.from({ length: totalPages }, (_, i) => (
+              <button
+                key={i + 1}
+                onClick={() => handlePageChange(i + 1)}
+                className={currentPage === i + 1 ? 'active' : ''}
+                style={{ fontWeight: currentPage === i + 1 ? 'bold' : 'normal' }}
+              >
+                {i + 1}
+              </button>
+            ))}
+            <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage === totalPages}>Next &raquo;</button>
           </div>
-          <div
-            className={
-              toggleState === 1 ? "contentcv  active-contentcv" : "contentcv"
-            }
-          >
-            <Interncv blogs={state.products} />
+        )}
+        <div className="content-tabs">
+          <div className={toggleState === 2 ? "contentcv  active-contentcv" : "contentcv"}>
+            <Interncv blogs={paginatedProducts} />
+          </div>
+          <div className={toggleState === 1 ? "contentcv  active-contentcv" : "contentcv"}>
+            <Interncv blogs={paginatedProducts} />
           </div>
         </div>
       </div>
