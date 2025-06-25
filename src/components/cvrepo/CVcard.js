@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import './cvcard.css';
 
 const CVcard = ({
-  blog: { title, name_, dept, category, cover, company, profilecolor },
+  blog: { title, name_, dept, category, cover, company, profilecolor, thumbnail },
   index,
   blogs,
 }) => {
@@ -46,7 +46,7 @@ const CVcard = ({
     <div className="blogItem-wrap rev cvcontainer">
       <div className={`cvbox ${category}2`}>
         <img
-          src={cover}
+          src={thumbnail}
           alt="blog"
           className={`cvimage ${category}2`}
           onClick={toggleDialog}
